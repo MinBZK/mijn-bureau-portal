@@ -1,0 +1,11 @@
+img.rvo-card__image {
+  padding-inline-start: 20px;
+}
+
+.rvo-card__image-container {
+  width: 80px;
+}
+
+.rvo-logo__emblem-image {
+  width: 140px;
+}
