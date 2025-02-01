@@ -1,0 +1,32 @@
+publiccodeYmlVersion: "0.2"
+categories:
+  - it-development
+description:
+  en:
+    features:
+      - Open Source
+      - Government
+    genericName: mijn burau portal
+    longDescription: |
+      Portal voor mijn bureau
+
+    shortDescription: Portal voor mijn bureau
+developmentStatus: concept
+legal:
+  license: EUPL-1.2
+localisation:
+  availableLanguages:
+    - en
+    - nl
+  localisationReady: false
+maintenance:
+  contacts:
+    - name: Mijn Bureau
+      email: opensource@minbzk.nl
+  type: community
+name: Mijn bureau portal
+platforms:
+  - docs
+releaseDate: "2024-12-18"
+softwareType: standalone/web
+url: "https://github.com/MinBZK/mijn-bureau-portal"
