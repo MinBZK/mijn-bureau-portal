@@ -7,7 +7,7 @@ module.exports = {
   mode: "development",
   entry: {},
   output: {
-    filename: "template.js",
+    filename: "src/assets/js/main.js",
     path: path.resolve(__dirname, "src/vendor/roos/"),
   },
   devtool: "source-map",

@@ -9,3 +9,15 @@ img.rvo-card__image {
 .rvo-logo__emblem-image {
   width: 140px;
 }
+
+.content {
+  padding-block-start: var(--rvo-space-md);
+  padding-block-end: var(--rvo-space-md);
+  flex-grow: 1;
+}
+
+.mijn-bureau-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
