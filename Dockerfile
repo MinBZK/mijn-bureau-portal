@@ -6,11 +6,14 @@ COPY package.json package-lock.json webpack.config.js ./
 COPY src/ ./src/
 
 RUN npm install
+
+ENV NODE_ENV=production
+
 RUN npm run build
 
 FROM nginx:1.27.3
 
-COPY --from=build /app/src /usr/share/nginx/html
+COPY --from=build /app/dist /usr/share/nginx/html
 
 EXPOSE 80
 

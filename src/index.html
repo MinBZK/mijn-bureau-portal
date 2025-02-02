@@ -3,39 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="assets/img/mijnbureau.svg" />
 
     <title>Mijn Bureau</title>
-
-    <script type="module" src="vendor/roos/design-tokens/index.js"></script>
-
-    <link rel="stylesheet" href="vendor/roos/fonts/index.css" />
-    <link rel="stylesheet" href="vendor/roos/icons/index.css" />
-    <link rel="stylesheet" href="vendor/roos/images/index.css" />
-    <link rel="stylesheet" href="vendor/roos/design-tokens/index.css" />
-    <link rel="stylesheet" href="vendor/roos/component-library-css/index.css" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-
-    <script type="text/javascript" src="assets/js/main.js"></script>
+    <%= htmlWebpackPlugin.tags.headTags %>
   </head>
   <body class="rvo-theme mijn-bureau-container">
-    <header class="rvo-header">
-      <div class="rvo-header__logo-wrapper">
-        <div class="rvo-logo">
-          <div class="rvo-logo__emblem">
-            <img
-              src="assets/img/mijnbureau.svg"
-              alt="Mijn Bureau"
-              class="rvo-logo__emblem-image"
-            />
-          </div>
-          <div class="rvo-logo__wordmark">
-            <p class="rvo-logo__title"></p>
-            <p class="rvo-logo__subtitle"></p>
-          </div>
-        </div>
-      </div>
-    </header>
+    <header class="rvo-header"></header>
     <div class="rvo-topnav__background rvo-topnav__background--horizontal-rule">
       <div
         class="rvo-max-width-layout rvo-max-width-layout--md rvo-min-width-layout--sm rvo-max-width-layout-inline-padding--md"
@@ -99,10 +72,7 @@
             class="rvo-card rvo-card--with-image rvo-card--with-image-sm rvo-card--outline rvo-card--padding-sm"
           >
             <div class="rvo-card__image-container">
-              <img
-                src="vendor/roos/icons/communicatie/tekstballonnen-met-punten.svg"
-                class="rvo-card__image"
-              />
+              <div class="chat-icon rvo-card__image"></div>
             </div>
             <div class="rvo-card--with-link-indicator">
               <div class="rvo-card__content">
@@ -122,12 +92,7 @@
           <div
             class="rvo-card rvo-card--with-image rvo-card--with-image-sm rvo-card--outline rvo-card--padding-sm"
           >
-            <div class="rvo-card__image-container">
-              <img
-                src="vendor/roos/icons/functioneel/bewerken.svg"
-                class="rvo-card__image"
-              />
-            </div>
+            <div class="rvo-card__image-container docs-icon"></div>
             <div class="rvo-card--with-link-indicator">
               <div class="rvo-card__content">
                 <h3 class="utrecht-heading-3">
@@ -146,12 +111,7 @@
           <div
             class="rvo-card rvo-card--with-image rvo-card--with-image-sm rvo-card--outline rvo-card--padding-sm"
           >
-            <div class="rvo-card__image-container">
-              <img
-                src="vendor/roos/icons/computer-en-internet/beeldbellen.svg"
-                class="rvo-card__image"
-              />
-            </div>
+            <div class="rvo-card__image-container meet-icon"></div>
             <div class="rvo-card--with-link-indicator">
               <div class="rvo-card__content">
                 <h3 class="utrecht-heading-3">
@@ -170,12 +130,7 @@
           <div
             class="rvo-card rvo-card--with-image rvo-card--with-image-sm rvo-card--outline rvo-card--padding-sm"
           >
-            <div class="rvo-card__image-container">
-              <img
-                src="vendor/roos/icons/computer-en-internet/applicatie.svg"
-                class="rvo-card__image"
-              />
-            </div>
+            <div class="rvo-card__image-container grist-icon"></div>
             <div class="rvo-card--with-link-indicator">
               <div class="rvo-card__content">
                 <h3 class="utrecht-heading-3">
@@ -194,12 +149,7 @@
           <div
             class="rvo-card rvo-card--with-image rvo-card--with-image-sm rvo-card--outline rvo-card--padding-sm"
           >
-            <div class="rvo-card__image-container">
-              <img
-                src="vendor/roos/icons/gebruiksvoorwerpen/hangslot-dicht.svg"
-                class="rvo-card__image"
-              />
-            </div>
+            <div class="rvo-card__image-container vault-icon"></div>
             <div class="rvo-card--with-link-indicator">
               <div class="rvo-card__content">
                 <h3 class="utrecht-heading-3">
@@ -218,12 +168,7 @@
           <div
             class="rvo-card rvo-card--with-image rvo-card--with-image-sm rvo-card--outline rvo-card--padding-sm"
           >
-            <div class="rvo-card__image-container">
-              <img
-                src="vendor/roos/icons/functioneel/user.svg"
-                class="rvo-card__image"
-              />
-            </div>
+            <div class="rvo-card__image-container account-icon"></div>
             <div class="rvo-card--with-link-indicator">
               <div class="rvo-card__content">
                 <h3 class="utrecht-heading-3">
@@ -307,7 +252,7 @@
                     role="img"
                     aria-label="Delta naar rechts"
                   ></span>
-                  Raporteer issues
+                  Rapporteer issues
                 </a>
               </li>
             </ul>
@@ -316,5 +261,6 @@
         <div class="rvo-footer__payoff">Beter samenwerken!</div>
       </footer>
     </div>
+    <%= htmlWebpackPlugin.tags.bodyTags %>
   </body>
 </html>

@@ -1,3 +1,5 @@
+import "../css/main.css";
+
 document.addEventListener("DOMContentLoaded", function () {
   document
     .querySelector(".rvo-alert .rvo-button__close")

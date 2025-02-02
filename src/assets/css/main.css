@@ -1,13 +1,15 @@
-img.rvo-card__image {
-  padding-inline-start: 20px;
-}
+@import "~@nl-rvo/design-tokens/dist/index.css";
+@import "~@nl-rvo/component-library-css/dist/index.css";
+@import "~@nl-rvo/assets/fonts/index.css";
+@import "~@nl-rvo/assets/icons/index.css";
+@import "~@nl-rvo/assets/images/index.css";
 
-.rvo-card__image-container {
-  width: 80px;
-}
-
-.rvo-logo__emblem-image {
-  width: 140px;
+.rvo-header {
+  width: 100px;
+  height: 100px;
+  background-image: url("../img/mijnbureau.svg");
+  background-size: cover;
+  background-position: center;
 }
 
 .content {
@@ -20,4 +22,62 @@ img.rvo-card__image {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.rvo-card__image-container {
+  height: 100%;
+}
+
+.chat-icon {
+  background-image: var(--rvo-icon-tekstballonnen-met-punten);
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.docs-icon {
+  background-image: var(--rvo-icon-bewerken);
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.meet-icon {
+  background-image: var(--rvo-icon-beeldbellen);
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.grist-icon {
+  background-image: var(--rvo-icon-applicatie);
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.vault-icon {
+  background-image: var(--rvo-icon-hangslot-dicht);
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.account-icon {
+  background-image: var(--rvo-icon-user);
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }

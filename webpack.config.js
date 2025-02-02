@@ -1,14 +1,16 @@
 const path = require("path");
 
-const CopyPlugin = require("copy-webpack-plugin");
-const ReplaceInFileWebpackPlugin = require("replace-in-file-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
-  mode: "development",
-  entry: {},
+  mode: process.env.NODE_ENV || "development",
+  entry: "./src/assets/js/main.js",
   output: {
-    filename: "src/assets/js/main.js",
-    path: path.resolve(__dirname, "src/vendor/roos/"),
+    filename: "assets/js/main.js",
+    path: path.resolve(__dirname, "./dist"),
   },
   devtool: "source-map",
   devServer: {
@@ -19,35 +21,38 @@ module.exports = {
     port: 9000,
   },
   plugins: [
-    new CopyPlugin({
-      patterns: [
-        { from: "node_modules/@nl-rvo/assets/fonts", to: "fonts" },
-        { from: "node_modules/@nl-rvo/assets/icons", to: "icons" },
-        {
-          from: "node_modules/@nl-rvo/design-tokens/dist/index.css",
-          to: "design-tokens/index.css",
-        },
-        {
-          from: "node_modules/@nl-rvo/design-tokens/dist/index.js",
-          to: "design-tokens/index.js",
-        },
-        {
-          from: "node_modules/@nl-rvo/component-library-css/dist/index.css",
-          to: "component-library-css/index.css",
-        },
-      ],
+    new HtmlWebpackPlugin({
+      title: "MijnBureau",
+      template: "src/index.html",
+      inject: false,
+      hash: true,
     }),
-    new ReplaceInFileWebpackPlugin([
+    new MiniCssExtractPlugin({}),
+    new FaviconsWebpackPlugin("src/assets/img/mijnbureau.svg"),
+  ],
+  module: {
+    rules: [
       {
-        dir: "src/vendor/roos/icons/",
-        files: ["index.css"],
-        rules: [
+        test: /\.css$/,
+        use: [
           {
-            search: /url\("(?!\/)/gi,
-            replace: 'url("/vendor/roos/icons/',
+            loader: MiniCssExtractPlugin.loader,
+            options: {},
           },
+          "css-loader",
         ],
       },
-    ]),
-  ],
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "assets/images/[name][ext][query]",
+        },
+      },
+    ],
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [`...`, new CssMinimizerPlugin()],
+  },
 };
