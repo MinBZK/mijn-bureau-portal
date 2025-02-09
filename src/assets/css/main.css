@@ -81,3 +81,12 @@
   height: 100%;
   width: 100%;
 }
+
+.ai-assistant-icon {
+  background-image: var(--rvo-icon-half-tandwiel-half-brein);
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
