@@ -99,3 +99,48 @@
   height: 100%;
   width: 100%;
 }
+
+.email-icon {
+  background-image: var(--rvo-icon-mail);
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.calendar-icon {
+  background-image: var(--rvo-icon-kalender);
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.taken-icon {
+  background-image: var(--rvo-icon-activiteit);
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.projecten-icon {
+  background-image: var(--rvo-icon-flat);
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.kennis-icon {
+  background-image: var(--rvo-icon-online-leren);
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
