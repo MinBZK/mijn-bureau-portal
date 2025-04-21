@@ -46,6 +46,15 @@
   width: 100%;
 }
 
+.drive-icon {
+  background-image: var(--rvo-icon-map);
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
 .meet-icon {
   background-image: var(--rvo-icon-beeldbellen);
   background-size: 60%;
